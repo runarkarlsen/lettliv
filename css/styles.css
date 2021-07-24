@@ -1,0 +1,329 @@
+body {
+  margin: 0;
+  color: #2e354f;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.6;
+  /* Fonter */
+  font-family: "Lato", sans-serif;
+  font-family: "Lora", serif;
+  font-family: "Special Elite", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Når man vil finne ut hvor feilen er.
+Legger til rødt rundt alle ting.
+* {
+  border: 2px solid red;
+}
+*/
+
+/*  ===========================
+Man begynner alltid med mobil view først.
+Så tilpasser man de andre formatene.
+Layout
+=============================*/
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.image-full {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2em;
+}
+
+/*  ===========================
+Typografi
+=============================*/
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #143774;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h3 {
+  color: #1792d2;
+}
+a {
+  color: #1792d2;
+}
+
+a:hover,
+a:focus {
+  color: #143774;
+}
+
+a:hover,
+a:focus {
+  color: #143774;
+}
+
+/* Logoens subtittel (h1) */
+.undertekst {
+  font-weight: 700;
+  color: #1792d2;
+  font-size: 0.75rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.article-title {
+  font-size: 1.5rem;
+}
+
+.article-read-more,
+.article-info {
+  font-size: 0.875rem;
+}
+
+.article-read-more {
+  color: #1792d2;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+  color: #143774;
+  text-decoration: underline;
+}
+
+.article-info {
+  margin: 2em 0;
+}
+
+.widget-title {
+  font-size: 1rem;
+  font-family: "ubuntu", sans-serif;
+  font-weight: 700;
+}
+
+/*  ===========================
+Layout
+=============================*/
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  border: 1px solid magenta;
+  margin: 0 auto; /* 0 auto; */
+}
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /*  */
+}
+
+/* Innstillinger for "header"  text-align: center; */
+header {
+  background: #f8f8f8;
+  padding: 2em 0;
+  text-align: center;
+  margin-bottom: 2em;
+  /* margin: center; */
+}
+
+footer {
+  background: #143774;
+  color: white;
+  text-align: center;
+  padding: 3em 0;
+}
+
+/*  ===========================
+Navigasjon
+=============================*/
+
+/*
+Under formaterer vi nav menyen
+Det kan gjøres ved å skrive referanser dit man ønsker å nå for å endre.
+Her vises hele stien, men unngå det, da blir siden treg
+nav ul 
+nav ul li
+nav ul li a
+Det over er ikke lurt
+Se heller ekseplene under
+*/
+
+nav ul {
+  /* hjelpelinjer av/på   border: 1px solid magenta;    */
+  list-style: none; /* skrur av dottene */
+  padding: 0;
+  /*display: flex; /* gjør menyen horisontal */
+  justify-content: center;
+}
+
+nav li {
+  /* hjelpelinjer av/på   border: 1px solid orange;    */
+  margin-left: 2em;
+}
+
+nav a {
+  /* hjelpelinjer av/på   border: 1px solid green;    */
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #1792d2;
+}
+
+.aktiv-side {
+  color: #2e354f;
+  border-bottom: 1px solid #707070;
+}
+
+.aktiv-side:hover {
+  color: #707070;
+}
+
+/* @media (min-width: 675px) betyr at
+fra 675px skal den vises som rad
+*/
+@media (min-width: 675px) {
+  .container-flex {
+    flex-direction: row;
+  }
+
+  main {
+    width: 70%;
+  }
+
+  aside {
+    width: 25%;
+  }
+
+  nav ul {
+    display: flex; /* gjør menyen horisontal */
+    justify-content: center;
+  }
+}
+
+/*  ===========================
+Artikler
+=============================*/
+
+.article-featured {
+  border-bottom: #707070 1px solid;
+  /* for å justere linja brukes best padding.
+  Det er avstanden fra det under og opp.
+  Padinga er det som er innerst mot selve teksten.
+  Tips: Lag bakgrunnen farget så ser du hva du gjør.
+  padding: 1em; eller padding-bottom: 5em;
+  background: pink;
+
+  Deretter benyttes border.
+  Boder er på utsiden av padding, mellom margin og padding.
+  Da kan man trekke linja lenger opp eller ned dersom man vil.
+  Altå: Padding, border, margin.
+  Border brukes ikke mye.
+  */
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+}
+
+/* De 3 taggene under er for å justere, rearrangere rekkefølgen på ting. 
+Bytter om på bilde og tekst 1 og 2 i de to seksjonene/områdene.
+Må bruke display: flex; først da.
+*/
+
+.article-recent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.article-recent-main {
+  order: 2;
+}
+
+.article-recent-secondary {
+  order: 1;
+}
+
+/* @media (min-width: 675px) betyr at
+fra 675px skal det under skje. Husk at det er to ; og ;
+*/
+@media (min-width: 675px) {
+  .article-recent {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .article-recent-main {
+    width: 68%;
+  }
+
+  .article-recent-secondary {
+    width: 30%;
+  }
+
+  .article-featured {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Cropper artikkel bildene til venstre.
+  */
+  .article-image {
+    order: -2;
+    min-height: 250px;
+    object-fit: cover;
+    /* object-position: left; */
+  }
+
+  .article-info {
+    order: -1;
+  }
+}
+
+/*  ===========================
+Widgets
+=============================*/
+
+.sidebar-widget {
+  border: 20px solid #efefef;
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.widget-recent-post {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #707070;
+  margin-bottom: 1em;
+  font-size: 0.9rem;
+}
+.widget-recent-post-title {
+  color: #143774;
+}
+
+/* Her skrur man av linja på siste widget-post. Trikset er :last-child */
+.widget-recent-post:last-child {
+  border: 0;
+  margin: 0;
+}
+/* Her bytter man på rekkefølgen på widget-image. */
+.widget-image {
+  order: -1;
+}
