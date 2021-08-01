@@ -116,12 +116,14 @@ a:focus {
 
 /*  ===========================
 Layout
+
+border: 1px solid magenta;
 =============================*/
 
 .container {
   width: 90%;
   max-width: 900px;
-  border: 1px solid magenta;
+
   margin: 0 auto; /* 0 auto; */
 }
 .container-flex {
